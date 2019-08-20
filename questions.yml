@@ -12,7 +12,7 @@ questions:
     description: "Elasticsearch image tag"
     type: string
     label: Elasticsearch Image Tag
-- variable: kubemq-token
+- variable: token
   default: ""
   description: "Enter your Kubemq token"
   label: KubeMQ token
