@@ -1,0 +1,20 @@
+questions:
+- variable: defaultImage
+  default: "true"
+  description: "Use default Docker image"
+  label: Use Default Image
+  type: boolean
+  group: "Container Images"
+  show_subquestion_if: false
+  subquestions:
+  - variable: image.tag
+    default: "latest"
+    description: "Elasticsearch image tag"
+    type: string
+    label: Elasticsearch Image Tag
+- variable: kubemq-token
+  default: ""
+  description: "Enter your Kubemq token"
+  label: KubeMQ token
+  type: string 
+  group: "KubeMQ token"
