@@ -1,1 +1,1 @@
-Use KubeMQ
+This HElm chart creates a KubeMQ cluster
