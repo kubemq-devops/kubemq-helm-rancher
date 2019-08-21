@@ -21,8 +21,8 @@ questions:
     label: Elasticsearch Image Tag
 - variable: replicaCount
   default: "3"
-  description: "Amount of kubeMQ cluster node"
-  label: KubeMQ token
+  description: "Amount of kubeMQ stateful set replicas"
+  label: KubeMQ Replicas
   type: enum 
   group: "General setting"
   options:
