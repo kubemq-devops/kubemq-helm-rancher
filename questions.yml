@@ -41,21 +41,21 @@ questions:
   - "ClusterIP"
 - variable: .persistence.enabled
   default: "false"
-  description: "Enable persistent volume for elasticsearch"
+  description: "Enable persistent volume for Kubemq"
   type: boolean
   required: true
-  label: Elasticsearch Persistent Volume Enabled
+  label: KubeMQ Persistent Volume Enabled
   show_subquestion_if: true
-  group: "elasticsearch"
+  group: "KubeMQ Persistent volume"
   subquestions:
-  - variable: elasticsearch.master.persistence.storageClass
+  - variable: volume.storageClass
     default: ""
     description: "If undefined or set to null, using the default StorageClass. Defaults to null."
     type: storageclass
-    label: Storage Class for Elasticsearch
-  - variable: elasticsearch.master.persistence.size
-    default: "10Gi"
-    description: "Elasticsearch persistent volume size"
+    label: Storage Class for KubeMQ
+  - variable: volume.size
+    default: "1Gi"
+    description: "KubeMQ persistent volume size"
     required: true
     type: string
-    label: Elasticsearch Persistent Volume Size
+    label: KubeMQ Persistent Volume Size
