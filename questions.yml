@@ -5,7 +5,7 @@ questions:
   label: KubeMQ token
   type: string 
   required: true
-  group: "KubeMQ token"
+  group: "General setting"
 - variable: defaultImage
   default: "true"
   description: "Use default Docker image"
@@ -19,3 +19,14 @@ questions:
     description: "Elasticsearch image tag"
     type: string
     label: Elasticsearch Image Tag
+- variable: replicaCount
+  default: "3"
+  description: "Amount of kubeMQ cluster node"
+  label: KubeMQ token
+  type: enum 
+  group: "General setting"
+  options:
+  - "3"
+  - "1"
+  - "5"
+  
