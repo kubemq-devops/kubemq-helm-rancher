@@ -26,7 +26,16 @@ questions:
   type: enum 
   group: "General setting"
   options:
-  - "3"
   - "1"
+  - "3"
   - "5"
+- variable: service.type
+  default: "NodePort"
+  description: "How do you intend to expose service to incoming traffic"
+  label: Service type
+  type: enum 
+  group: "Service Settings"
+  options:
+  - "NodePort"
+  - "LoadBalancer"
   
