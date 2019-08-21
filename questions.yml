@@ -1,4 +1,11 @@
 questions:
+- variable: token
+  default: ""
+  description: "Enter your Kubemq token"
+  label: KubeMQ token
+  type: string 
+  required: true
+  group: "KubeMQ token"
 - variable: defaultImage
   default: "true"
   description: "Use default Docker image"
@@ -12,9 +19,3 @@ questions:
     description: "Elasticsearch image tag"
     type: string
     label: Elasticsearch Image Tag
-- variable: token
-  default: ""
-  description: "Enter your Kubemq token"
-  label: KubeMQ token
-  type: string 
-  group: "KubeMQ token"
