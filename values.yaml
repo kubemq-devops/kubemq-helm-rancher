@@ -5,6 +5,14 @@ kubeMQPort: 8080
 clusterPort: 5228
 token: null 
 
+volume:
+  enabled: "false"
+  size: 1Gi
+  mountPath: /store
+  accessMode: "ReadWriteOnce"
+  name: kubemq-pvc
+  storageClass: ""
+
 image:
   repository: kubemq/kubemq
   tag: latest
