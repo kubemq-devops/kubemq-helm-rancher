@@ -45,10 +45,10 @@ spec:
             - containerPort: {{ .Values.clusterPort }}
               name: cluster-port
               protocol: TCP
-{{- if eq .Values.volume.enabled "true" }}
+{{- if .Values.volume.enabled }}
           volumeMounts:
           - mountPath: {{ .Values.volume.mountPath | quote }}
-            name: kubemq-data
+            name: {{ .Values.volume.name  }}-{{ .Release.Name }}
   volumeClaimTemplates:
   - metadata:
       name: {{ .Values.volume.name  }}-{{ .Release.Name }}

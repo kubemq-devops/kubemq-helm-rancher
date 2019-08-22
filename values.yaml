@@ -6,7 +6,7 @@ clusterPort: 5228
 token: null 
 
 volume:
-  enabled: "false"
+  enabled: false
   size: 1Gi
   mountPath: /store
   accessMode: "ReadWriteOnce"
