@@ -39,7 +39,7 @@ questions:
   - "NodePort"
   - "LoadBalancer"
   - "ClusterIP"
-- variable: .persistence.enabled
+- variable: volume.enabled
   default: "false"
   description: "Enable persistent volume for Kubemq"
   type: boolean
