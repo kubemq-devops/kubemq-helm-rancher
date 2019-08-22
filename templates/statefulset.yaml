@@ -16,7 +16,7 @@ spec:
       containers:
         - env:
             - name: KUBEMQ_TOKEN
-              value: {{ required "A Valid token value must be set" .Values.token }}
+              value: required "A Valid token value must be set" {{ .Values.token }}
             - name: CLUSTER_ROUTES
               value: "kubemq-cluster-{{ .Release.Name }}-service:{{ .Values.clusterPort }}"
             - name: CLUSTER_PORT
@@ -56,7 +56,7 @@ spec:
       accessModes:
         - {{ .Values.volume.accessMode | quote }}
     {{- if .Values.volume.storageClass }}
-    {{- if (eq "-" .Values.volume..storageClass) }}
+    {{- if (eq "-" .Values.volume.storageClass) }}
       storageClassName: ""
     {{- else }}
       storageClassName: "{{ .Values.volume.storageClass }}"
