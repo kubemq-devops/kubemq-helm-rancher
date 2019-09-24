@@ -13,4 +13,4 @@ sources:
 maintainers:
 - name: ido-sheffer
   email: ido.sheffer@kubemq.io
-icon: file://../kubemqlogo.png
+icon: file://./kubemqlogo.png
