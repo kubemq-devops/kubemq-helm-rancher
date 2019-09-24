@@ -1,3 +1,5 @@
+labels:
+  io.cattle.role: project
 questions:
 - variable: token
   default: ""
